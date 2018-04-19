@@ -1,6 +1,6 @@
 function git-create() {
   repo_name=$1
-  username='epillepsy'
+  username='your_username'
   test -z $repo_name && echo "Repo name required." 1>&2 && return 1
   curl -u $username https://api.github.com/user/repos -d "{\"name\":\"$repo_name\"}"
   git init
